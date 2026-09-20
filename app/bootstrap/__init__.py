@@ -1,0 +1,1 @@
+"""Bootstrap layer: process entry point and splash/init sequence."""
