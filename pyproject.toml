@@ -1,0 +1,32 @@
+[project]
+name = "crossfire-config-menu"
+version = "0.4.2"
+description = "Layered desktop configuration/overlay menu scaffold for the CrossFire client (Windows)."
+authors = [{ name = "cf-menu-devs" }]
+requires-python = ">=3.11"
+readme = "README.md"
+license = { text = "MIT" }
+dependencies = [
+    "PyQt5>=5.15.9",
+    "pymem>=1.13.0",
+    "keyboard>=0.13.5",
+    "pydantic>=2.5.0",
+    "colorama>=0.4.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "black>=24.1.0",
+    "mypy>=1.8.0",
+]
+
+[project.scripts]
+crossfire-config-menu = "app.bootstrap.launcher:main"
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
